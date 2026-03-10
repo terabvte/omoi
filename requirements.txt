@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+sqlmodel
+openai
+sentence-transformers
+scikit-learn
+faiss-cpu
+streamlit
+pandas
+python-dotenv
