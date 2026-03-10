@@ -36,3 +36,15 @@ class StructuredProblem(SQLModel, table=True):
     notes: Optional[str] = None
 
     cluster_id: Optional[int] = Field(default=None, index=True)
+
+
+class ProblemCluster(SQLModel, table=True):
+    __tablename__ = "problem_clusters"
+
+    cluster_id: int = Field(primary_key=True)
+    opportunity_score: float = Field(default=0.0)
+    item_count: int = Field(default=0)
+
+    # We will generate this with an LLM in the Streamlit step,
+    # but we need the column ready now.
+    cluster_name: Optional[str] = None
